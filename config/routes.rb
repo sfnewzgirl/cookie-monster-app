@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root 'cookies#index'
   get '/cookies' => 'cookies#index'
+  get '/cookies/favorite' => 'cookies#favorite', as: :favorite_cookie
   get '/cookies/:id' => 'cookies#show', as: :show_cookie
+  get '/cookies/:id/save_as_favorite' => 'cookies#save_as_favorite', as: :save_as_favorite
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -19,7 +19,7 @@ class Cookie
   end
 
   def self.find(id)
-    all.find {|c| c.id == id}
+    all.find {|c| c.id == id.to_s }
   end
 
 end

@@ -30,13 +30,15 @@ $(function(){
         $('body').append(
             $("<h2>", {text: "Challenge 2: Unlock the Cookie Show pages!"} ),
             $("<p>", {text: "> Create a cookie 'can_has=yarly' that will trick the server into thinking you're logged in!"} ),
-            $("<p>", {text: "> See `app/controllers/cookies_controller.rb#l10`"} )
+            $("<p>", {text: "> See redirect in `cookies_controller#show`"} )
         )
       } else {
         $('body').append(
             $("<h2>", {text: "Challenge 2: ✓✓✓"} ),
             $("<h3>", {text: "Success! You have a cookie in your browser!"} ),
-            $("<h3>", {text: "You now have access to all pages"} ),
+            $("<h3>", {text: "You now have access to all pages above"} ),
+            $("<h2>", {text: "Challenge 3 & 4: Can you get Favoriting working?"} ),
+            $("<p>", {text: "> Open `app/controllers/cookies_controller.rb for instructions"} ),
             $("<img>", {src: "https://media.giphy.com/media/E6pfGEOsrDidq/giphy.gif"})
         )
       }
