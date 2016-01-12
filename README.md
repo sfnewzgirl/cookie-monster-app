@@ -16,14 +16,14 @@ rails s
 > Note: This rails application does not use a database or turbolinks.
 
 ####Challenges
-To begin, visit `http://localhost:3000/deserts` in your browser, with the Chrome Console open.
+To begin, visit `http://localhost:3000/desserts` in your browser, with the Chrome Console open.
 
 1. Use the Chrome Console to manually set a cookie for the website to: `fav_color=blue`. When you refresh the page, a script running on the page will detect the color and apply it to the background of the page.
-2. Manually add a second cookie (`can_has=yarly`) so that you can access the 3 `deserts#show` pages (`/deserts/1`, `/deserts/2`, `/deserts/3`).
-  * The server is actually checking for this cookie in the HTTP Request Headers (see the `deserts#show` controller). Without this cookie, you will be blocked (redirected) from viewing all desert pages!
-3. When a user clicks "Save as Favorite" on a `deserts#show` page, store the desert id in the user's session. (See `app/controllers/deserts_controller.rb`)
-4. Modify the `deserts#show` view to indicate whether the desert shown is the user's favorite desert (See `app/controllers/deserts_controller.rb` and `app/views/deserts/show.html.erb`).
-  * How would you compare the current_desert to the user's favorite desert? Can you use this comparison to create a "conditional view"?
+2. Manually add a second cookie (`can_has=yarly`) so that you can access the 3 `desserts#show` pages (`/desserts/1`, `/desserts/2`, `/desserts/3`).
+  * The server is actually checking for this cookie in the HTTP Request Headers (see the `desserts#show` controller). Without this cookie, you will be blocked (redirected) from viewing all dessert pages!
+3. When a user clicks "Save as Favorite" on a `desserts#show` page, store the dessert id in the user's session. (See `app/controllers/desserts_controller.rb`)
+4. Modify the `desserts#show` view to indicate whether the dessert shown is the user's favorite dessert (See `app/controllers/desserts_controller.rb` and `app/views/desserts/show.html.erb`).
+  * How would you compare the current_dessert to the user's favorite dessert? Can you use this comparison to create a "conditional view"?
 5. Stretch: Can you DRY up the controller code by using a `before_action` to check whether the user is logged in?
 
 > Pay special attention to `Resources > Cookies > localhost` in the Developer Console. The Cookies-view allows you to browse and delete cookies associated with the current domain.

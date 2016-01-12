@@ -2,10 +2,9 @@
 
 <p> You can see this image because you set the cookie `can_has` equal to `yarly` in your browser. Otherwise the server would have redirected you back to the homepage.</p>
 
-<%= image_tag @desert.img_url %>
+<%= image_tag @dessert.img_url %>
 
 </br>
 
-<!-- CHANGE THIS link to reflect whether the desert has already been favorited -->
-<%= button_to "Save as Favorite", save_as_favorite_path(@desert.id) %>
-
+<!-- CHANGE THIS link to reflect whether the dessert has already been favorited -->
+<%= button_to "Save as Favorite", save_as_favorite_path(@dessert.id) %>

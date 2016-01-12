@@ -53,7 +53,7 @@ $(function(){
 
   $('body').css("background-color", fav_color || "white" )
 
-  if ( $("#deserts_index_page").length ) {
+  if ( $("#desserts_index_page").length ) {
 
     // Challenge Prompts
     if(!fav_color){
@@ -73,9 +73,9 @@ $(function(){
     if (window.CHALLENGE_1_DONE) {
       if(can_has !== "yarly" ){
         $('body').append(
-            $("<h2>", {text: "Challenge 2: Unlock the Desert Show pages!"} ),
+            $("<h2>", {text: "Challenge 2: Unlock the dessert Show pages!"} ),
             $("<p>", {text: "> Create a cookie 'can_has=yarly' that will trick the server into thinking you're logged in!"} ),
-            $("<p>", {text: "> See redirect in `deserts_controller#show`"} )
+            $("<p>", {text: "> See redirect in `desserts_controller#show`"} )
         )
       } else {
         $('body').append(
@@ -83,7 +83,7 @@ $(function(){
             $("<h3>", {text: "Success! You have a cookie in your browser!"} ),
             $("<h3>", {text: "You now have access to all pages above"} ),
             $("<h2>", {text: "Challenge 3 & 4: Can you get Favoriting working?"} ),
-            $("<p>", {text: "> Open `app/controllers/deserts_controller.rb for instructions"} )
+            $("<p>", {text: "> Open `app/controllers/desserts_controller.rb for instructions"} )
         )
       }
     }
@@ -92,4 +92,3 @@ $(function(){
 
 
 })
-

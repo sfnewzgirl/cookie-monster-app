@@ -1,0 +1,15 @@
+<div id="desserts_index_page">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Hack the desserts!</h1>
+    <%= link_to "Go to your Favorite dessert", favorite_dessert_path %>
+
+
+  <ul>
+    <% @desserts.each do |dessert| %>
+      <li>
+        <%= link_to "Show dessert #{dessert.id}", show_dessert_path(dessert.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
