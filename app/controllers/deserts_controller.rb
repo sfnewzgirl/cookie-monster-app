@@ -28,8 +28,7 @@ class DesertsController < ApplicationController
     render 'show'
   end
 
-  # Get /deserts/1/save_as_favorite
-  # This is a nasty bad un-RESTful route! :(
+  # POST /deserts/1/save_as_favorite
   def save_as_favorite
     redirect_to root_path and return if not is_logged_in
     fav_desert_id = params[:id]

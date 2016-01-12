@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/deserts' => 'deserts#index'
   get '/deserts/favorite' => 'deserts#favorite', as: :favorite_desert
   get '/deserts/:id' => 'deserts#show', as: :show_desert
-  get '/deserts/:id/save_as_favorite' => 'deserts#save_as_favorite', as: :save_as_favorite
+  post '/deserts/:id/save_as_favorite' => 'deserts#save_as_favorite', as: :save_as_favorite
 
 
   # The priority is based upon order of creation: first created -> highest priority.
