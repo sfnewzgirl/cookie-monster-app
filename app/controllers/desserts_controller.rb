@@ -35,7 +35,7 @@ class DessertsController < ApplicationController
   def save_as_favorite
     redirect_to root_path and return if not is_logged_in
     session[:favorite_dessert_id] = params[:id] # SET favorite
-    flash[:notice] = "dessert ##{fav_dessert_id} saved in session as favorite!"
+    flash[:notice] = "dessert #{params[:id]} saved in session as favorite!"
     redirect_to root_path
   end
 
