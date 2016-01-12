@@ -10,30 +10,33 @@ class DesertsController < ApplicationController
     redirect_to root_path and return if not is_logged_in
 
     ## CHALLENGE 4: This is my favorite desert!
-    ## Detect whether the desert the user is viewing
-    ## is their favorite_desert, and add the words
-    ## 'FAVORITE DESERT' in the `views/deserts/show.html.erb` template
+    ### Detect whether the desert the user is viewing
+    ### is their favorite_desert, and add the words
+    ### 'FAVORITE DESERT' in the `views/deserts/show.html.erb` template
 
     @desert = Desert.find(params[:id])
   end
 
   # GET /deserts/favorite
+  # Shows the user's favorite desert (if set in the session)
   def favorite
     redirect_to root_path and return if not is_logged_in
 
-    ## CHALLENGE 3: Render my favorite_desert
-    ## by first checking my session for `favorite_desert_id`
-    favorite_desert_id = 1 # CHANGE THIS to my favorite_desert_id!!!
+    ## CHALLENGE 3: Render my favorite_desert!
+    ### Check my session for my `favorite_desert_id`
+    ### and then render my favorite desert
+    favorite_desert_id = 1 # CHANGE THIS
     @desert = Desert.find(favorite_desert_id)
     render 'show'
   end
 
   # POST /deserts/1/save_as_favorite
+  # Sets the user's favorite desert in their session
   def save_as_favorite
     redirect_to root_path and return if not is_logged_in
-    fav_desert_id = params[:id]
-    session[:fav_desert_id] = fav_desert_id
-    flash[:notice] = "Desert ##{fav_desert_id} saved in session as favorite!"
+    id = params[:id]
+    session[:favorite_desert_id] = id # Set favorite
+    flash[:notice] = "Desert ##{id} saved in session as favorite!"
     redirect_to root_path
   end
 

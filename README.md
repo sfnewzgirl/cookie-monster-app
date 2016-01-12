@@ -18,24 +18,23 @@ rails s
 ####Challenges
 To begin, visit `http://localhost:3000/deserts` in your browser, with the Chrome Console open.
 
-1. Use the Chrome Console to manually set a cookie for the website to: `fav_color=blue`
-  * When you refresh the page, a script running on the page will detect the color and apply it to the background of the page.
-2. Manually add a second cookie (`can_has=yarly`) so that you can access the 3 desert pages.
-  * This is a cookie that the server is actually checking for! (see the `deserts#show` controller). Without this cookie, you're blocked from viewing the desert pages!
-  * When you click "Show Desert 1" with the correct cookie set, it should take you to `/deserts/1`.
-3. When a user clicks "Save as Favorite" on a `deserts#show` page, store the cookie id in the user's session. (See `app/controllers/deserts_controller.rb`)
-4. Modify the `deserts#show` view to indicate whether the cookie shown is the user's favorite cookie (See `app/controllers/deserts_controller.rb` and `app/views/deserts/show.html.erb`).
-  * How would you compare the current_cookie to the user's favorite cookie? Can you use this comparison to create a "conditional view"?
+1. Use the Chrome Console to manually set a cookie for the website to: `fav_color=blue`. When you refresh the page, a script running on the page will detect the color and apply it to the background of the page.
+2. Manually add a second cookie (`can_has=yarly`) so that you can access the 3 `deserts#show` pages (`/deserts/1`, `/deserts/2`, `/deserts/3`).
+  * The server is actually checking for this cookie in the HTTP Request Headers (see the `deserts#show` controller). Without this cookie, you will be blocked (redirected) from viewing all desert pages!
+3. When a user clicks "Save as Favorite" on a `deserts#show` page, store the desert id in the user's session. (See `app/controllers/deserts_controller.rb`)
+4. Modify the `deserts#show` view to indicate whether the desert shown is the user's favorite desert (See `app/controllers/deserts_controller.rb` and `app/views/deserts/show.html.erb`).
+  * How would you compare the current_desert to the user's favorite desert? Can you use this comparison to create a "conditional view"?
 5. Stretch: Can you DRY up the controller code by using a `before_action` to check whether the user is logged in?
 
 > Pay special attention to `Resources > Cookies > localhost` in the Developer Console. The Cookies-view allows you to browse and delete cookies associated with the current domain.
 
-#### Summary
+#### Take Away
+**What's the difference between a cookie and a session?**
+
 By the end of this lab you should be able to explain how and why these cookies are present in your browser:
 
 <img width="735" alt="screen shot 2016-01-11 at 7 30 58 pm" src="https://cloud.githubusercontent.com/assets/1489337/12254093/06d8244a-b89a-11e5-8e6d-3c68c8e279b2.png">
 
-What's the difference between a cookie and a session?
 
 #### Resources
 * [Cookies, Sessions, & Flash Messages](http://www.theodinproject.com/ruby-on-rails/sessions-cookies-and-authentication)
