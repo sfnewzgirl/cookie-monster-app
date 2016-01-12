@@ -1,0 +1,13 @@
+<div id="cookies_index_page">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Hack the Cookies!</h1>
+
+  <ul>
+    <% @cookies.each do |cookie| %>
+      <li>
+        <%= link_to "Show Cookie #{cookie.id}", show_cookie_path(cookie.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
