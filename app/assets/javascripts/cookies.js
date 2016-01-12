@@ -38,8 +38,7 @@ $(function(){
             $("<h3>", {text: "Success! You have a cookie in your browser!"} ),
             $("<h3>", {text: "You now have access to all pages above"} ),
             $("<h2>", {text: "Challenge 3 & 4: Can you get Favoriting working?"} ),
-            $("<p>", {text: "> Open `app/controllers/cookies_controller.rb for instructions"} ),
-            $("<img>", {src: "https://media.giphy.com/media/E6pfGEOsrDidq/giphy.gif"})
+            $("<p>", {text: "> Open `app/controllers/cookies_controller.rb for instructions"} )
         )
       }
     }

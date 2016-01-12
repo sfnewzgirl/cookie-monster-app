@@ -12,7 +12,7 @@ class CookiesController < ApplicationController
   def show
     redirect_to root_path and return if not is_logged_in
 
-    ## CHALLENGE 3: This is my favorite cookie!
+    ## CHALLENGE 4: This is my favorite cookie!
     ## Detect whether the cookie the user is viewing
     ## is their favorite_cookie, and add the words
     ## 'FAVORITE COOKIE' in the `views/cookies/show.html.erb` template
@@ -24,7 +24,7 @@ class CookiesController < ApplicationController
   def favorite
     redirect_to root_path and return if not is_logged_in
 
-    ## CHALLENGE 4: Render my favorite_cookie
+    ## CHALLENGE 3: Render my favorite_cookie
     ## by first checking my session for `favorite_cookie_id`
     favorite_cookie_id = 1 # CHANGE THIS to my favorite_cookie_id!!!
     @cookie = Cookie.find(favorite_cookie_id)
