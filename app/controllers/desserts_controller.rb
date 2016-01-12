@@ -25,7 +25,8 @@ class DessertsController < ApplicationController
     ## CHALLENGE 3: Render my favorite_dessert!
     ### Check my session for my `favorite_dessert_id`
     ### and then render my favorite dessert
-    favorite_dessert_id = 1 # CHANGE THIS
+    ### AS-IS this will raise an error
+    favorite_dessert_id = 34404 # CHANGE THIS
     @dessert = Dessert.find(favorite_dessert_id)
     render 'show'
   end
