@@ -1,0 +1,15 @@
+<div id="deserts_index_page">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Hack the Deserts!</h1>
+    <%= link_to "Go to your Favorite Desert", favorite_desert_path %>
+
+
+  <ul>
+    <% @deserts.each do |desert| %>
+      <li>
+        <%= link_to "Show Desert #{desert.id}", show_desert_path(desert.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

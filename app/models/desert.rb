@@ -1,4 +1,4 @@
-class Cookie
+class Desert
 
   attr_reader :img_url, :id
 
@@ -9,9 +9,9 @@ class Cookie
   end
 
   @@all = [
-      Cookie.new({id: "1", img_url: "http://i.imgur.com/irvtyXG.gif"}),
-      Cookie.new({id: "2", img_url: "http://i.imgur.com/pB4MEQP.jpg"}),
-      Cookie.new({id: "3", img_url: "http://i.imgur.com/RbdlzzL.jpg"})
+      Desert.new({id: "1", img_url: "http://i.imgur.com/irvtyXG.gif"}),
+      Desert.new({id: "2", img_url: "http://i.imgur.com/pB4MEQP.jpg"}),
+      Desert.new({id: "3", img_url: "http://i.imgur.com/RbdlzzL.jpg"})
   ]
 
   def self.all
