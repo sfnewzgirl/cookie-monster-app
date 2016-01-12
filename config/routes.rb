@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  root 'deserts#index'
-  get '/deserts' => 'deserts#index'
-  get '/deserts/favorite' => 'deserts#favorite', as: :favorite_desert
-  get '/deserts/:id' => 'deserts#show', as: :show_desert
-  post '/deserts/:id/save_as_favorite' => 'deserts#save_as_favorite', as: :save_as_favorite
+  root 'desserts#index'
+  get '/desserts' => 'desserts#index'
+  get '/desserts/favorite' => 'desserts#favorite', as: :favorite_dessert
+  get '/desserts/:id' => 'desserts#show', as: :show_dessert
+  post '/desserts/:id/save_as_favorite' => 'desserts#save_as_favorite', as: :save_as_favorite
 
 
   # The priority is based upon order of creation: first created -> highest priority.
