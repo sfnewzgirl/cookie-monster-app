@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def is_logged_in
-    cookies[:can_has] == "yarly"
+    cookies[:can_access] == "yes"
   end
 end
