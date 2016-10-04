@@ -13,8 +13,10 @@ class DessertsController < ApplicationController
     ### Detect whether the dessert the user is viewing
     ### is their favorite_dessert, and add the words
     ### 'FAVORITE dessert' in the `views/desserts/show.html.erb` template
-
     @dessert = Dessert.find(params[:id])
+    if session[:favorite_dessert_id] == params[:id]
+      @message = "FAVORITE dessert"
+    end
   end
 
   # GET /desserts/favorite
@@ -26,7 +28,7 @@ class DessertsController < ApplicationController
     ### Check my session for my `favorite_dessert_id`
     ### and then render my favorite dessert
     ### AS-IS this will raise an error
-    favorite_dessert_id = 34404 # CHANGE THIS
+    favorite_dessert_id = session[:favorite_dessert_id]
     @dessert = Dessert.find(favorite_dessert_id)
     render 'show'
   end
